@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 import sklearn
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
@@ -6,9 +6,9 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-#Adultdata.csv is binary output of either making more than 50K or less
+'#Adultdata.csv is binary output of either making more than 50K or less'
 
-data = pd.read_csv("/Users/amitnarayan/Coding/Machine-Learning-Portfolio/Turicreate/adult.csv", error_bad_lines=False)
+data = pd.read_csv("../../../Machine-Learning-Portfolio/Turicreate/adult.csv", error_bad_lines=False)
 
 data_v2 = data.append(data) #I do this  in order to make sure "data" on line 11 doesn't get corrupted or changed in some way
 
@@ -22,7 +22,7 @@ final_data = pd.concat([X_enc, Y_target], axis = 1, sort=False) #pd.concat docum
 X = final_data.drop(['income'], axis = 1)
 Y = final_data['income'] 
  
-X_train, X_test, y_train,y_test = train_test_split(X, Y, test_size=0.2)
+X_train,X_test,y_train,y_test = train_test_split(X,Y,test_size=0.2)
 
 logisticRegression = LogisticRegression(solver="sag", penalty="l2")
 logisticRegression.fit(X,Y)
