@@ -44,15 +44,14 @@ logisticRegression = LogisticRegression(solver="sag", penalty="l2")
 logisticRegression.fit(X, Y)
 
 Y_pred = logisticRegression.predict(X_test[0:10])
-print(data_v2[0:10]) '#Prints the original data; the ground truth'
+print(data_v2[0:10])  # Prints the original data; the ground truth
 print(Y_pred)
 '#Prints what the income the model predicted, either >50K or <= 50K'
 
 '#Total Accuracy: Correct predictions / Total number of data points'
 total_model_accuracy = logisticRegression.score(X_test, y_test)
 
-print(total_model_accuracy)  '#Model  accuracy is 83.3%'
+print(total_model_accuracy)  # Model  accuracy is 83.3%'
 """#Additional Resources:
 https://scikit-learn.org/stable/modules/generated/sklearn.
 linear_model.LogisticRegression.html"""
-
