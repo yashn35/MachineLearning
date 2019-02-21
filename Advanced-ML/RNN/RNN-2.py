@@ -29,7 +29,7 @@ ANSWER:We know that one_unit_SRNN_weights[0][0][0] is the input weight
 because it return's 7 when mutplying 1*7 for the last input vector. Since it doesn't multiply the output weight
 as it is the last timestep it should return 7. 
 I also proved that one_unit_SRNN_weights[0][0][0] is the input weight because when I made it equal to 0 and 
-one_unit_SRNN_weights[1][0][0] = 1 the output 
+one_unit_SRNN_weights[1][0][0]=1 the output was 0
 """
 
 one_unit_SRNN.set_weights(one_unit_SRNN_weights)
