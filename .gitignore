@@ -2,9 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.DS_Store
 # C extensions
 *.so
+
+#Ignore VSCode folder
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Distribution / packaging
 .Python
