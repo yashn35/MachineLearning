@@ -22,12 +22,11 @@ X_income = data_v2.select_dtypes(include=['object'])
 X_enc = X_income.copy()
 
 '#one-hot encoding values from my data_v2set using pd.getdummies method'
+X_enc = pd.get_dummies(X_income, columns=['workclass', 'native-country',
+                                          'gender', 'relationship', 'race',
+                                          'occupation', 'workclass',
+                                          'education', 'marital-status'])
 
-""" #TODO: FIX PEP8 PROTOCOL CONFLICT
-X_enc = pd.get_dummies(X_income, columns =
-    ['workclass', 'native-country', 'gender', 'relationship',
-    'race', 'occupation', 'workclass', 'education', 'marital-status'])
-"""
 '#Y_target Income is the target row or the output of the model'
 Y_target = data_v2['income']
 
@@ -56,3 +55,4 @@ print(total_model_accuracy)  '#Model  accuracy is 83.3%'
 """#Additional Resources:
 https://scikit-learn.org/stable/modules/generated/sklearn.
 linear_model.LogisticRegression.html"""
+
