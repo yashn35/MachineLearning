@@ -1,1 +1,1 @@
-# This is my code from CS321 class, Advanced Machine Learning, offered at The Nueva School
+# This is my code from the CS321, Advanced Machine Learning, offered by The Nueva School.
