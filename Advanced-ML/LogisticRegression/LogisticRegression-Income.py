@@ -53,6 +53,7 @@ print(Y_pred)
 
 '#Total Accuracy: Correct predictions / Total number of data points'
 total_model_accuracy = logisticRegression.score(X_test, y_test)
+
 print(total_model_accuracy)  # Model  accuracy is 83.3%'
 """#Additional Resources:
 https://scikit-learn.org/stable/modules/generated/sklearn.

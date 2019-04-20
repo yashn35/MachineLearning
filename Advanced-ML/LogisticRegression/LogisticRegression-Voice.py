@@ -28,7 +28,9 @@ X_enc = X_voice.copy()
 
 final_data = pd.DataFrame(data=data_v2)
 
+#Training data
 X = final_data.drop(['label'], axis=1)
+#Testing data
 Y = final_data['label']
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
@@ -39,12 +41,12 @@ logisticRegression.fit(X, Y)
 Y_pred = logisticRegression.predict(X_test[0:20])
 print(data_v2[0:20])  # Prints the original data; the ground truth
 print(Y_pred)
-'#Prints what the income the model predicted, either >50K or <= 50K'
+'#Prints what the income the model predicted, either male or female'
 
 '#Total Accuracy: Correct predictions / Total number of data points'
 total_model_accuracy = str(logisticRegression.score(X_test, y_test) * 100) + str("% accuracy")
 
-print(total_model_accuracy)  # Model  accuracy is 83.3%'
+print(total_model_accuracy) 
 """#Additional Resources:
 https://scikit-learn.org/stable/modules/generated/sklearn.
 linear_model.LogisticRegression.html"""
