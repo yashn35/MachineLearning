@@ -1,1 +1,1 @@
-# This is Yash's master Logistic Regression code, written from scratch. This combines state of the art logistic regression techniques to solve three problems on three datasets. 
+# This is Yash's Logistic Regression code. This combines logistic regression techniques to solve three problems on three datasets. 
