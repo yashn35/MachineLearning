@@ -2,6 +2,7 @@
 # a set of ad-data whether someone clicked on the ad or not
 # Data was taken from this Kaggle link: https://www.kaggle.com/fayomi/advertising/version/1
 
+#Imports
 import pandas as pd
 import sklearn
 import numpy as np
@@ -22,21 +23,24 @@ X_advertising = data_v2.copy()
 X_advertising = data_v2.select_dtypes(include=['object'])
 X_enc = X_advertising.copy()
 
-'#one-hot encoding values from my data_v2set using pd.getdummies method'
+'#one-hot encoding values for word data
+'#from my data_v2set using pd.getdummies method'
 X_enc_1 = pd.get_dummies(X_advertising, columns=['Ad Topic Line', 'City', 'Country', 'Timestamp'])
 #Variable for all the data that does not need to one-hot econded
 X_enc_2 = X_advertising.drop(['Ad Topic Line', 'City', 'Country', 'Timestamp'], axis=1)
 
-'#Y_target Income is the target row or the output of the model'
+'#Y_target Clicked On Ad, is the target row or the output of the model'
 Y_target = data_v2['Clicked on Ad']
 
+#This combines all the data 
 final_data = pd.concat([X_enc_1, X_enc_2, Y_target], axis=1, sort=False)
-#print("FINAL DATA:", final_data)
 """pd.concat documentation
 https://pandas.pydata_v2.org/pandas-docs/version/0.23.4/
 generated/pandas.concat.html"""
 
+#Training data
 X = final_data.drop(['Clicked on Ad'], axis=1)
+#Testing data
 Y = final_data['Clicked on Ad']
 
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
