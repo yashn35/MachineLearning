@@ -54,6 +54,6 @@ print(Y_pred)
 '#Total Accuracy: Correct predictions / Total number of data points'
 total_model_accuracy = str(logisticRegression.score(X_test, y_test) * 100) + str("% accuracy")
 print(total_model_accuracy)  
-"""Additional Resources:
+"""EDIT: Additional Resources:
 https://scikit-learn.org/stable/modules/generated/sklearn.
 linear_model.LogisticRegression.html"""
