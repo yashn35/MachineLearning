@@ -40,7 +40,7 @@ final_data = pd.concat([X_enc_1, X_enc_2, Y_target], axis=1, sort=False)
 X = final_data.drop(['Clicked on Ad'], axis=1)
 #Testing data
 Y = final_data['Clicked on Ad']
-
+#Train test split
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 
 logisticRegression = LogisticRegression(solver="sag", penalty="l2")
