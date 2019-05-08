@@ -32,19 +32,10 @@ X_enc = pd.get_dummies(X_income, columns=['workclass', 'native-country',
 '#Y_target Income is the target row or the output of the model'
 Y_target = data_v2['income']
 
-final_data = pd.concat([X_enc, Y_target], axis=1, sort=False)
-print("FINAL DATA:", final_data)
-"""pd.concat documentation
-https://pandas.pydata_v2.org/pandas-docs/version/0.23.4/
-generated/pandas.concat.html"""
-
-X = final_data.drop(['income'], axis=1)
-Y = final_data['income']
-
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X_enc, Y_target, test_size=0.2)
 
 logisticRegression = LogisticRegression(solver="sag", penalty="l2")
-logisticRegression.fit(X, Y)
+logisticRegression.fit(X_enc, Y_target)
 
 Y_pred = logisticRegression.predict(X_test[0:10])
 print(data_v2[0:10])  # Prints the original data; the ground truth
