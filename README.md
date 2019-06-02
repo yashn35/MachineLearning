@@ -1,5 +1,5 @@
 # Machine Learning Portfolio
-Yash Narayan's Master Machine Learning Code from all school classes, books, online courses, and fun projects. Enjoy!
+This is my machine learning code, which reflects my extensive love for AI. Enjoy!
 
 # Advanced Machine Learning Course
 
