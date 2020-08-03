@@ -1,11 +1,11 @@
 # Machine Learning Portfolio
-This is my machine learning code, which reflects my extensive love for AI. Enjoy!
+Machine learning code from CS321 and CS320. 
 
-# Advanced Machine Learning Course
+# Advanced Machine Learning Course (CS321)
 
 Topics covered include: Generative Models (face generator), Reinforcement Learning (RL Game), Recurrent Neural Network (LSTM approach), Convolutional Neural Network, Probablistic Programming, Natural Language Processing (sentiment analysis)
 
-# Introduction to Machine Learning Course
+# Introduction to Machine Learning Course (CS320)
 
 Topics covered include: Regressions (Logistic, Lasso, Linear), Clustering (Kmeans, Dbscan), Data Processing
 
